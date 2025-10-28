@@ -15,7 +15,7 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#learn">Learning</a></li>
           <li><a href="/Sign In/index.html">Sign In</a></li>
-          <li><a href="#">Sign Up</a></li>
+          <li><a href="/Sign Up/index.html">Sign Up</a></li>
         </ul>
       </nav>
     </div>
@@ -28,7 +28,7 @@
           sudah kita dapatkan selama belajar
         </h2>
       </div>
-      <div class="button">
+      <div class="button" onclick="window.location.href='#learn'">
         <h1>Belajar Sekarang</h1>
       </div>
     </section>
@@ -38,7 +38,7 @@
         <h1>Kategori</h1>
         <h2>Disini ada beberapa pelajaran yang bisa kalian pelajari</h2>
         <div class="kategori">
-          <div class="mikro">
+          <div class="mikro" onclick="window.location.href='/Code ESP/index.html'">
             <img src="/Image/mortarboard.png" alt="" />
             <h1>Mikrotik</h1>
             <p>
@@ -47,7 +47,7 @@
             </p>
             <div class="button">0 Course</div>
           </div>
-          <div class="server">
+          <div class="server" onclick="window.location.href='/Code Mikrotik/index.html'">
             <img src="/Image/mortarboard.png" alt="" />
             <h1>Debian Server</h1>
             <p>
@@ -56,7 +56,7 @@
             </p>
             <div class="button">0 Course</div>
           </div>
-          <div class="esp">
+          <div class="esp" onclick="windows.location.href='/Code Server/index.html'">
             <img src="/Image/mortarboard.png" alt="" />
             <h1>ESP8266</h1>
             <p>
@@ -68,6 +68,14 @@
         </div>
       </div>
     </section>
+    <!-- Popular -->
+     <section id="popular">
+      <div class="popular">
+        <div class="mikrotik"></div>
+        <div class="debian"></div>
+        <div class="debian"></div>
+      </div>
+     </section>
     <script src="/Home/script.js"></script>
   </body>
 </html>
