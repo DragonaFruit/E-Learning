@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ABE7B2;
+}
+
+.atas {
+  background: rgba(255, 255, 255, 0.2); /* transparan putih lembut */
+  backdrop-filter: blur(10px);           /* efek kaca buram (glassmorphism) */
+  border-radius: 20px;                   /* sudut melengkung */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* efek bayangan */
+  width: 380px;
+  padding: 40px 30px;
+  color: rgb(69, 53, 53);
+  text-align: center;
+}
+
+.kubus {
+    font-size: 5vh;
+
+
+}
