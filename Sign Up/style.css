@@ -51,18 +51,21 @@ body {
 }
 
 .atas input {
-   width: 90%;
+    width: 90%;
     height: 48px;
     background: transparent;
-    border: none;
+ 
     outline: none;
-    border:2px solid rgb(14, 49, 63);
-    border-radius: 7px;
+    border: 2px solid rgba(14, 49, 53);
+    backdrop-filter: blur(10px);
+    border-radius: 8px ;
     padding: 0 20px 0 ;
     font-size: 15px;
     outline: none;
-    
 }
 
-
+.kotak input:focus {
+     border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+     box-shadow: 0 4px 8px -6px rgba(255, 255, 255, 0.3);
+}
 

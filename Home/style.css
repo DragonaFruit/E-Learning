@@ -5,6 +5,7 @@ html, body {
   padding: 0;
   background-color: #f4f4f4;
   scroll-behavior: smooth;
+  scroll-padding-top: 64px; /* Pastikan ini sesuai tinggi navbar sticky */
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -115,6 +116,12 @@ nav ul li a:hover {
   font-size: 36px;
   font-weight: 300;
 }
+.belajar .plj {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  color: blue;
+}
 .belajar h2 {
   margin-top: -2rem;
   font-family: "Poppins", sans-serif;
@@ -137,13 +144,17 @@ nav ul li a:hover {
   align-items: center;
   text-align: center;
   background-color: rgb(214, 199, 202);
-  height: 300px;
+  height: 400px;
   width: 200px;
   border-radius: 20px;
 }
+.mikro h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
 .mikro img {
   width: auto;
-  height: 100px;
+  height: 50px;
 }
 .server {
   display: flex;
@@ -152,13 +163,17 @@ nav ul li a:hover {
   align-items: center;
   text-align: center;
   background-color: rgb(180, 199, 202);
-  height: 300px;
+  height: 400px;
   width: 200px;
   border-radius: 20px;
 }
+.server h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
 .server img {
   width: auto;
-  height: 100px;
+  height: 50px;
 }
 .esp {
   display: flex;
@@ -167,11 +182,24 @@ nav ul li a:hover {
   align-items: center;
   text-align: center;
   background-color: rgb(199, 199, 202);
-  height: 300px;
+  height: 400px;
   width: 200px;
   border-radius: 20px;
 }
+.esp h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
 .esp img {
   width: auto;
-  height: 100px;
+  height: 50px;
+}
+.kategori .button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(255, 0, 0, 0);
+  width: 100px;
+  border-radius: 12px;
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.6);
 }
