@@ -127,22 +127,51 @@ nav ul li a:hover {
   justify-content: space-between;
   width: 700px;
   height: 300px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 .mikro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   background-color: rgb(214, 199, 202);
   height: 300px;
   width: 200px;
   border-radius: 20px;
 }
+.mikro img {
+  width: auto;
+  height: 100px;
+}
 .server {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   background-color: rgb(180, 199, 202);
   height: 300px;
   width: 200px;
   border-radius: 20px;
 }
+.server img {
+  width: auto;
+  height: 100px;
+}
 .esp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   background-color: rgb(199, 199, 202);
   height: 300px;
   width: 200px;
   border-radius: 20px;
+}
+.esp img {
+  width: auto;
+  height: 100px;
 }
