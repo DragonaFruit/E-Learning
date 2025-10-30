@@ -65,10 +65,15 @@ body {
   border-radius: 10px;
   box-shadow: 0 5px 6px -6px rgba(255, 255, 255, 0.1);
   font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
 }
 
 .kotak input::placeholder {
   color: rgb(58, 39, 39);
+}
+
+.kotak input:focus {
+  border-bottom: 10px solid rgba(0, 0, 0, 0.9);
 }
 
 .kotak input:hover {
