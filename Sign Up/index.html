@@ -3,29 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sing Up</title>
-    <link rel="stylesheet" href="/Sign Up/style.css" />
+    <title>Sign Up</title>
+    <!-- gunakan path relatif (file di folder yang sama) -->
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
     <div class="atas">
-        <form action="">
+      <form novalidate>
         <h1>Register</h1>
-            <div class="kubus">
-                <input type="masukan-text" placeholder="Username" required />
-            </div>
-            <div class="kubus">
-                <input type="masukan teks" placeholder="G-mail" />
-            </div>
-            <div class="kubus">
-                <input type="masukan teks" placeholder="Pasword" />
-            </div>
-            
-            <button type="klik" class="pencetan">Register</button>
-        
-            <div class="jalurlogin">
-                <p>have an account? <a href="/Sign In/index.html">Login</a></p>
-            </div>
-        </form>
+
+        <div class="kubus">
+          <i class="fa fa-user"></i>
+          <input id="username" type="text" placeholder="Username" required />
+        </div>
+
+        <div class="kubus">
+          <i class="fa-solid fa-at"></i>
+          <input id="email" type="email" placeholder="G-mail" required />
+        </div>
+
+        <div class="kubus">
+          <i class="fa-solid fa-key"></i>
+          <input
+            id="password"
+            type="password"
+            placeholder="Password"
+            required
+          />
+          <i
+            id="togglePassword"
+            class="fa-solid fa-eye eye-left"
+            title="Lihat / Sembunyikan password"
+            aria-hidden="true"
+          ></i>
+        </div>
+
+        <button id="registerBtn" type="submit" class="pencetan" disabled>
+          Register
+        </button>
+
+        <div class="jalurlogin">
+          <p>have an account? <a href="../Sign%20In/index.html">Login</a></p>
+        </div>
+      </form>
     </div>
+    <!-- muat script relatif (script.js ada di folder yang sama) -->
+    <script src="script.js"></script>
   </body>
 </html>
