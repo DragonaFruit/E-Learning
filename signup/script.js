@@ -33,15 +33,32 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 
+  // new helper: hanya terima alamat gmail
+  function isGmailAddress(value) {
+    const v = String(value || "").trim().toLowerCase();
+    if (!v) return false;
+    const [local, domain] = v.split("@");
+    return typeof local === "string" && local.length > 0 && domain === "gmail.com";
+  }
+
   function updateRegisterState() {
     const pwLen = password.value.trim().length;
+    const emailOk = isGmailAddress(email.value);
     const filled =
-      username.value.trim() !== "" && email.value.trim() !== "" && pwLen >= 8;
+      username.value.trim() !== "" && emailOk && pwLen >= 8;
 
+    // hanya tampilkan peringatan jika ada input dan kurang dari 8 karakter
     if (password.value.trim().length > 0 && pwLen < 8) {
       pwHelp.textContent = "Password harus minimal 8 karakter";
     } else {
       pwHelp.textContent = "";
+    }
+
+    // tunjukkan peringatan jika email sudah diisi tapi bukan gmail
+    if (email.value.trim().length > 0 && !emailOk) {
+      emailHelp.textContent = "Email harus menggunakan @gmail.com";
+    } else if (email.value.trim().length === 0) {
+      emailHelp.textContent = "";
     }
 
     registerBtn.disabled = !filled;
@@ -82,16 +99,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (email.value.trim() === "") {
-        emailHelp.textContent = "Mohon isi G-mail";
+        emailHelp.textContent = "Mohon isi email";
         email.setAttribute("aria-invalid", "true");
         firstInvalid = firstInvalid || email;
-      } else {
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(email.value.trim())) {
-          emailHelp.textContent = "Alamat email tidak valid";
-          email.setAttribute("aria-invalid", "true");
-          firstInvalid = firstInvalid || email;
-        }
+      } else if (!isGmailAddress(email.value)) {
+        emailHelp.textContent = "Email harus menggunakan @gmail.com";
+        email.setAttribute("aria-invalid", "true");
+        firstInvalid = firstInvalid || email;
       }
 
       if (password.value.trim() === "") {
@@ -109,9 +123,8 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // semua valid -> redirect ke Sign In
-      // gunakan origin + encoded path agar server menerima permintaan
-      const signInPath = "/Sign%20In/index.html"; // ubah kalau lokasi beda
+      // semua valid -> redirect ke Verif
+      const signInPath = "/Verif/index.html"; // ubah kalau lokasi beda
       const target = window.location.origin + signInPath;
       console.log("Redirecting to", target);
       window.location.href = target;

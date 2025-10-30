@@ -1,0 +1,237 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --bg-grad-start: #0f172a;
+  --bg-grad-end: #0b3b5b;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --glass: rgba(255, 255, 255, 0.06);
+  --accent: #4fd1c5;
+  --accent-2: #2bb7e0;
+  --text: #e6eef6;
+  --muted: rgba(230, 238, 246, 0.75);
+  --radius: 12px;
+  --shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+  --max-width: 420px;
+  --gap: 14px;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Make root and body take full height to allow vertical centering */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background - gradient + image, cover and center for all devices */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: var(--text);
+  background-color: var(--bg-grad-start);
+  background-image: url(/Image/bsign.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: clamp(12px, 3vw, 32px);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Slight overlay to ensure content legibility on variable backgrounds */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 10, 22, 0.28),
+    rgba(2, 10, 22, 0.42)
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Container that mirrors signup layout */
+.atas {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: clamp(10px, 2.6vw, 18px);
+  margin: 0;
+  z-index: 1; /* sit above overlay */
+}
+
+/* Card: responsive sizing and preserved visual style */
+.card {
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.02)
+  );
+  border-radius: var(--radius);
+  padding: clamp(18px, 3.6vw, 28px);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Heading & text with fluid sizing */
+.card h1 {
+  margin: 0 0 8px 0;
+  font-size: clamp(18px, 2.6vw, 22px);
+  letter-spacing: 0.4px;
+}
+.card p {
+  margin: 0 0 12px 0;
+  color: var(--muted);
+  font-size: clamp(13px, 1.8vw, 15px);
+}
+
+/* Countdown number style */
+.muted {
+  color: var(--muted);
+}
+
+/* Button - accessible size and focus styles */
+button,
+.pencetan {
+  appearance: none;
+  border: none;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #042027;
+  padding: clamp(10px, 2.2vw, 12px) clamp(12px, 4vw, 18px);
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  font-size: clamp(14px, 2.2vw, 15px);
+  display: inline-block;
+  text-decoration: none;
+}
+button:hover,
+.pencetan:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(47, 128, 144, 0.18);
+}
+button:focus,
+.pencetan:focus {
+  outline: 3px solid rgba(79, 209, 197, 0.18);
+  outline-offset: 3px;
+}
+
+/* Utility layout: keep parity with signup */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+/* .kubus style used in signup inputs - kept for consistency */
+.kubus {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--glass);
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+.kubus i {
+  color: var(--muted);
+  min-width: 20px;
+  text-align: center;
+}
+.kubus input {
+  background: transparent;
+  border: 0;
+  outline: none;
+  color: var(--text);
+  font-size: 15px;
+  flex: 1;
+}
+
+/* register button (signup) styles compatibility */
+.pencetan {
+  margin-top: 6px;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+.pencetan[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* small link area */
+.jalurlogin {
+  text-align: center;
+  color: var(--muted);
+  font-size: clamp(12px, 1.8vw, 14px);
+  margin-top: 10px;
+}
+.jalurlogin a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Layout tweaks for very small screens:
+   - reduce max width, stack spacing, ensure touch targets remain large */
+@media (max-width: 460px) {
+  :root {
+    --max-width: 360px;
+    --gap: 12px;
+  }
+  .card {
+    padding: 16px;
+  }
+  .atas {
+    padding: 14px;
+  }
+  .kubus {
+    padding: 10px;
+  }
+  button,
+  .pencetan {
+    width: 100%;
+    font-size: 15px;
+  }
+}
+
+/* Landscape phones and small tablets: center content vertically without huge gaps */
+@media (max-height: 420px) and (orientation: landscape) {
+  body {
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+}
+
+/* High density / retina adjustments (crisper background handling) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* nothing drastic, but ensure background covers */
+  body {
+    background-size: cover;
+  }
+}
+
+/* Respect user prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* ...existing code... */

@@ -1,3 +1,36 @@
-<html>
-    
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Verifikasi</title>
+    <!-- gunakan path relatif agar selalu menemukan file di folder Verif -->
+    <link rel="stylesheet" href="/Verif/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="atas">
+      <div class="card">
+        <h1>Verifikasi Dikirim</h1>
+        <p>Silakan cek email Anda untuk melakukan verifikasi.</p>
+        <p class="muted">
+          Mengarahkan ke Sign In dalam <span id="countdown">60</span> detik.
+        </p>
+
+        <button id="proceedBtn" type="button" class="pencetan">
+          Lanjut ke Sign In
+        </button>
+
+        <div class="jalurlogin">
+          <p>Sudah verifikasi? <a href="/signin/index.html">Masuk</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- script relatif -->
+    <script src="/Verif/script.js"></script>
+  </body>
 </html>

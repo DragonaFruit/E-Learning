@@ -13,7 +13,7 @@ body {
   align-items: center;
   min-height: 100vh;
   background: white;
-  background-image: url(../Image/bsign.jpg);
+  background-image: url(/Image/bsign.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -122,6 +122,7 @@ body {
   margin-top: 8px;
   display: none;
   font-size: 0.95rem;
+  text-align: center;
 }
 
 .error--visible {
@@ -161,6 +162,7 @@ body {
     width: 250px;
     height: 300px;
     padding: 20px 25px;
+    margin-bottom: 100px;
   }
 
   .atas h1 {
@@ -174,7 +176,7 @@ body {
   }
 
   .kotak input {
-    font-size: 10px;
+    font-size: 12px;
     padding: 15px 40px 15px 15px;
   }
 
@@ -184,8 +186,31 @@ body {
   }
 
   .verif label input {
-    margin-right: 2px;
-    
+    margin-right: 3px;
+    width: 10px;
+    height: 10px;
+    text-align: center;
   }
 
+  .atas .btn {
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .atas .register-where {
+    font-size: 10px;
+    margin: 15px 0 10px;
+  }
+
+  .error {
+    font-size: 0.65rem;
+    margin: auto;
+    text-align: center;
+  }
+
+  .kotak i {
+    font-size: 14px;
+    right: 10px;
+    margin-top: 5px;
+  }
 }
