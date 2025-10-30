@@ -145,24 +145,4 @@ body {
         padding-right: 12px;
       }
 
-      @media (max-width: 2560px) {
-        .atas {
-          width: 90%;
-          padding: 40px 25px;
-          font-size: 1;
-        }
-
-        .atas h1 {
-          font-size: 48px;
-        }
-
-        .kubus {
-          height: 60px;
-        }
-
-        .pencetan {
-          height: 60px;
-          font-size: 20px;
-        }
-      } 
-   
+      
