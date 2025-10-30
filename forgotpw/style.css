@@ -12,6 +12,10 @@ body {
   align-items: center;
 }
 
+.atas a {
+  color: black;
+}
+
 .atas h1 {
     font-family: "Mynerve", cursive;
     margin-left: 3rem;
@@ -65,6 +69,10 @@ body {
 
 .kotak input::placeholder {
   color: rgb(58, 39, 39);
+}
+
+.kotak input:hover {
+  border-color: rgb(30, 90, 255);
 }
 
 
