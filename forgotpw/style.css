@@ -72,7 +72,7 @@ body {
 }
 
 .kotak input:hover {
-  border-color: rgb(30, 90, 255);
+  border-color: linear-gradient(135deg, #6EE7B7, #3B82F6);
 }
 
 
