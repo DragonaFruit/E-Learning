@@ -75,7 +75,7 @@ if (form) {
       return;
     }
 
-     window.location.href = "/Home/index.html";
+     window.location.href = "/index.html";
 
   });
 }
