@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=League+Spartan:wght@100..900&family=Mynerve&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+    background: white;
+}
+
+.atas {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: -20px;
+    align-items: center;
+}
+
+.atas a {
+    color: black;
+}
+
+.atas h1 {
+    font-family: "Mynerve", cursive;
+    margin-left: 3rem;
+}
+
+.tengah {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+}
+
+.tengah i {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px 15px 10px 15px;
+  box-shadow: 0 5px 6px -6px rgba(255, 255, 255, 0.1);
+}
+
+.tengah h2 {
+    font-size: 30px;
+    margin: 50px 0px -20px 0px;
+}
+
+.tengah p {
+    color: rgb(122, 122, 122);
+    margin-bottom: 30px;
+}
+
+.kode {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+.kode input {
+    width: 70px;
+    height: 70px;
+    margin: 0 -1px;
+    text-align: center;
+}
+
+.no {
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    font-family: "Vend Sans", sans-serif;
+    text-align: center;
+    border: 3px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.2s ease;
+    font-weight: 1000;
+}
+
+.no.filled {
+    border-color: #0099ff;
+    box-shadow: 0 0 2px 0px rgba(59, 130, 246, 0.6);
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
