@@ -13,7 +13,7 @@ body {
   align-items: center;
   min-height: 100vh;
   background: white;
-  background-image: url(/Image/bsign.jpg);
+  background-image: url(../Image/bsign.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
